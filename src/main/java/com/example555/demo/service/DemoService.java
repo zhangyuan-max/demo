@@ -1,5 +1,6 @@
 package com.example555.demo.service;
 
+import com.example555.demo.controller.AiData;
 import com.example555.demo.controller.Mapperway;
 import com.example555.demo.controller.Request;
 
@@ -15,4 +16,11 @@ public interface DemoService {
     int getAddData(Request request);
 
     int getDeleteId(Request request);
+
+
+   int getUpdateId(Request request);
+
+
+    List<AiData> getRelation(Request request);
+
 }

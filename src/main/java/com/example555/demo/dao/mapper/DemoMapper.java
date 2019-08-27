@@ -18,4 +18,8 @@ public interface DemoMapper {
 
     int getDeleteId(@Param("userCompanyId") Integer userCompanyId);
 
+   int getUpdateId(AiData requestUpdate);
+
+    List<AiData> getRelation();
+
 }

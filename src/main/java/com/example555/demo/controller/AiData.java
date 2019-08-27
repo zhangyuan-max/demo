@@ -7,7 +7,7 @@ public class AiData {
 
     private Integer userCompanyId;
 
-
+ private Integer age;
 
     private Integer id;
 

@@ -31,7 +31,7 @@ public class DemoController {
 
     @RequestMapping(value = "/get-add-data", method = RequestMethod.POST)
     public int getAddData(@RequestBody Request request){
-        return demoService.getAddId(request);
+        return demoService.getAddData(request);
 
     }
 
@@ -39,6 +39,20 @@ public class DemoController {
     @RequestMapping(value = "/get-delete-id", method = RequestMethod.POST)
     public int getDeleteId(@RequestBody Request request){
         return demoService.getDeleteId(request);
+
+    }
+
+//  修改功能 update
+    @RequestMapping(value = "/get-update-id", method = RequestMethod.POST)
+    public int getUpdateId(@RequestBody Request request){
+        return demoService.getUpdateId(request);
+
+    }
+
+//  关联查询
+    @RequestMapping(value = "/get-relation", method = RequestMethod.POST)
+    public List<AiData> getRelation(@RequestBody Request request){
+        return demoService.getRelation(request);
 
     }
 

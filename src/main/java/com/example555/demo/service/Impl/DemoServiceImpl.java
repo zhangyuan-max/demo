@@ -62,4 +62,30 @@ public class DemoServiceImpl implements DemoService {
          return demoMapper.getDeleteId(userCompanyId);
     }
 
+
+    public int getUpdateId(Request request){
+        Integer userCompanyId = request.getUserCompanyId();
+        Integer id = request.getId();
+        Integer price = request.getPrice();
+        String name = request.getName();
+
+        AiData requestUpdate = new AiData();
+
+        requestUpdate.setUserCompanyId(userCompanyId);
+        requestUpdate.setId(id);
+        requestUpdate.setName(name);
+        requestUpdate.setPrice(price);
+
+
+
+        return demoMapper.getUpdateId(requestUpdate);
+    }
+
+
+    public List<AiData> getRelation(Request request){
+
+
+        return demoMapper.getRelation();
+    }
+
 }
